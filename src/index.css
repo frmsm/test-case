@@ -1,0 +1,185 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  min-width: 400px;
+  max-width: 1000px;
+}
+
+.interests {
+    position: relative;
+  width: 60%;
+  margin: 0 auto;
+    overflow: hidden;
+
+}
+
+hr {
+  border: none;
+  background-color: #000;
+  height: 2px;
+}
+
+h3 {
+    position: relative;
+}
+
+h3:after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    width: 100%;
+    border-bottom: 1px dotted #000;
+}
+
+h2 {
+  margin: 20px 0 0;
+}
+
+.hobbies-input {
+  margin-left: 25px;
+}
+
+ul {
+  height: auto;
+  overflow: hidden;
+  transition: max-height .5s ease;
+  position: relative;
+  list-style: none;
+}
+
+li {
+  position: relative;
+  line-height: 20px;
+}
+
+.spoiler {
+  display: none;
+  text-decoration: underline;
+  color: orange;
+  cursor: pointer;
+}
+
+.visible {
+  display: block;
+}
+
+.del, .add-from-friend {
+  top: 4px;
+  left: -11px;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+}
+
+.reporting {
+  position: absolute;
+  right: 0px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  width: 125px;
+  height: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+.reporting:before {
+  content: '';
+  position: absolute;
+  background-color: lightgray;
+  left: 1px;
+  top: 5px;
+  background: url("./img/warn.png") no-repeat;
+  width: 18px;
+  height: 18px;
+}
+
+li:hover .del{
+  display: inline-block;
+}
+
+li:hover .reporting{
+  display: inline-block;
+}
+
+li:hover .add-from-friend{
+  display: inline-block;
+}
+
+.listText {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.listText:after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 2px;
+  height: 100%;
+  width: 15px;
+  background: rgba(255,255,255,1);
+  background: linear-gradient(left, rgba(255,255,255,1) 14%, rgba(254,254,254,1) 20%, rgba(246,246,246,1) 72%, rgba(237,237,237,1) 100%);
+  opacity: .5;
+}
+
+.sended:after {
+  content: 'добавлено в ваши увлечения';
+  color: green;
+  margin-left: 22px;
+}
+
+.sended:before {
+  content: '';
+  position: absolute;
+  background: url("./img/ok.png") no-repeat;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
+}
+
+.disabled {
+  display: none;
+}
+
+.close-window {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.close-window:before, .close-window:after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  width: 5px;
+  height: 30px;
+  background-color: black;
+}
+
+.close-window:before {
+  transform: rotate(45deg);
+}
+
+.close-window:after {
+  transform: rotate(-45deg);
+}
+
+.report-window {
+  position: absolute;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  left: 35%;
+  bottom: 60%;
+  background-color: lightgray;
+}
