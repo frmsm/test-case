@@ -46,9 +46,9 @@ class App extends React.Component {
     }
 
     removeMyHobby(hobbyIndex) {
-        let myHobbies = this.state.myHobbies;
+        const myHobbies = this.state.myHobbies;
         let friendsSpoilerMinHeight = this.state.friendsSpoilerMinHeight;
-        let friendsHobbies = this.state.friendsHobbies;
+        const friendsHobbies = this.state.friendsHobbies;
         if (myHobbies[hobbyIndex].received === true) {
             let i = friendsHobbies.findIndex(hobby=>{
                 return hobby.id === myHobbies[hobbyIndex].id;
@@ -64,8 +64,8 @@ class App extends React.Component {
     }
 
     addHobbyFromFriend(hobbyIndex) {
-        let friendsHobbies = this.state.friendsHobbies;
-        let friendsSpoilerMinHeight = this.state.friendsSpoilerMinHeight;
+        const friendsHobbies = this.state.friendsHobbies;
+        const friendsSpoilerMinHeight = this.state.friendsSpoilerMinHeight;
         friendsHobbies[hobbyIndex].sended = 'true';
         this.setState({
             friendsHobbies: friendsHobbies,
